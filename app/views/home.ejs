@@ -1,0 +1,15 @@
+<%- include('templates/header.ejs'); %>
+<main>
+  <div class="jumbotron">
+    <h1>This is great</h1>
+  </div>
+
+  <div>
+    <img src="<%- JSON.stringify(data) %>" alt="" />
+
+    <% if(data && Array.isArray(data)) { data.forEach(element=> { %>
+    <img src="<%- element.source %>" alt="" />
+    <%}); } %>
+  </div>
+</main>
+<%- include('templates/footer.ejs'); %>
